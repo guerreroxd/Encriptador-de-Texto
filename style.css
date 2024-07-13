@@ -1,0 +1,257 @@
+* {
+    margin: 0 auto;
+    scrollbar-color: var(--dark-blue) #f3f5fc;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background: #f3f5fc;
+    max-width: 1440px;
+    max-height: 1024px;
+    margin: auto;
+  }
+  
+  header, footer{
+    height: 10%;
+    width: auto;
+  }
+  
+  .Logo{
+  margin: 40px;
+  }
+  
+  /* === Primera Parte === */
+  
+  main{
+    height: 80%;
+    margin: auto;
+  }
+  
+  .cajas-de-texto{
+    width: 90%; /* Cambia 1296 px a un porcentaje */
+    position: relative;
+    margin: 0 auto;
+    
+  }
+  
+  .Input-Box{
+    width: calc(60% - 10px);
+    border: none;
+    color: #0A3871;
+    
+  }
+  .contenedor-central {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: stretch;
+  }
+  
+  textarea{
+    display: inline-block;
+    border: none;
+    padding: 3%;
+    width: 90%;
+    height: 420px;
+    resize: none;
+    background-color: #f3f5fc;
+    outline: none; /* Ya corregidas las dimensiones no necesitamos notar el borde */
+  }
+  
+  #texto-ingresado{
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0A3871;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    
+  }
+  
+  .Input-Box ::placeholder{
+    color: #0A3871;
+    font-family: Inter;
+  }
+  
+  /* Estilos de los botones */
+  .Buttons-box {
+    display: flex;
+    margin-top: 1.5rem;
+    border-radius: 24px;
+    opacity: 0px;
+    font-family: Inter;
+    text-align: center;
+    justify-content: space-evenly; /* distribuir equitativamente los espacios libres */
+    flex-wrap: wrap;
+    width: 90%; 
+  }
+  
+  #boton-encriptar,
+  #boton-desencriptar {
+    height: 67px;
+    line-height: 19px;
+    width: 45%;
+    max-width: 100%; 
+    border-radius: 24px;
+    border: none;
+    font-size: 16px;
+    transition: 0.5s all;
+  }
+  
+  #boton-encriptar {
+    background-color: #0A3871;
+    color: white;
+  }
+  
+  #boton-encriptar:hover {
+    background-color: #1664c2;
+    transform: scale(1.05);
+  }
+  
+  #boton-desencriptar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+  }
+  
+  #boton-desencriptar:hover {
+    background: #b7cdec;
+    transform: scale(1.05);
+  }
+  
+  /* === Segunda Parte === */
+  
+  .Output-box{
+    position: absolute;
+    display: inline-block;
+    top: -20px; /* Se coloca ligeramente arriba del input box por cuestiones e diseño */
+    width: calc(40%-10px);
+    right: 0;
+  }
+  
+  .container-texto-resultado{
+    background-color: white;
+    width: 400px;
+    height: 668.33px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    text-align: center;
+  }
+  
+  #Dolly{
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    gap: 0px;
+    margin: 20px auto;
+    opacity: 0px;
+    margin-top: 60px;
+    transform: scale(80%);
+  }
+  
+  #Mensaje-resultado{
+    width: 336px;
+    margin: auto;
+    padding: 2vh;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    overflow: auto; /* Para manejar desbordamiento si es necesario */
+    height: auto; /* Expande la altura automáticamente según el contenido */
+  
+  }
+  
+  #Mensaje-sugerencia{
+    width: 336px;
+    margin: 24px auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  /* === botón copiar === */
+  /* es un botón condicionado a una función */
+  .boton-copiar {
+    width: 336px;
+    height: 67px;
+    margin: auto;
+    gap: 8px;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    background-color: white;
+    transition: 0.5s all;
+  }
+  
+  .boton-copiar p{
+    color: #0A3871;
+  }
+  
+  .boton-copiar:hover{
+    background: #E9ECF8;
+    transform: scale(1.05);
+  }
+  
+  footer{
+    width: 20%;
+    margin: 5% 40% 0px 40%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    /* Estilos específicos para pantallas más pequeñas */
+    
+    header {
+      text-align: center;
+      height: 15%;
+    }
+  
+    .cajas-de-texto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .Input-Box{
+      margin-bottom: 20%;
+    }
+  
+    .Input-Box,.Output-box, #texto-ingresado, .Buttons-box, .container-texto-resultado {
+      width: 95%;
+      position: relative;
+    }
+    .Buttons-box{
+      text-align: center;
+    }
+  
+    .container-texto-resultado{
+      overflow: auto; /* Para manejar desbordamiento si es necesario */
+      height: auto; /* Expande la altura automáticamente según el contenido */
+  
+    }
+  
+    #Mensaje-resultado, #Mensaje-sugerencia{
+      padding-top: 5%;
+      width: 80%;
+    }
+  
+    #Dolly{
+      display: none; /* En pantallas móviles no se mostrará esta imagen */
+    }
+    .boton-copiar{
+      margin-top: 2%;
+      width: 50%;
+      margin-bottom: 2%;
+    }
+    
+    footer{
+      width: 120px;
+      margin: auto;
+    }
+    
+  }
